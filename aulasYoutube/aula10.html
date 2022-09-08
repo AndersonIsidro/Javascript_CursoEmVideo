@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivendo em um País</title>
+    <style>
+        body{
+            background:rgb(26, 21, 21);
+            color: aliceblue;
+            font:normal 18pt Arial;
+        }
+        div#area{
+            background: rgb(149, 194, 179);
+            color: rgb(5, 0, 78);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Sistema de Países!</h1>
+    Qual País você nasceu:<input type="string" name="txtpais". id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    
+    </div>
+    <script>
+        function calcular(){
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var valor = String(txtp.value.toUpperCase())
+            res.innerText = `o País que você nasceu é ${valor} !!`
+            var pOrigem = String("BRASIL")
+            if(valor == pOrigem){
+            res.innerHTML +=`<p>Parabens você é Brasileiro!!</p>`
+            }else{
+                res.innerHTML += "<p> Você é Estrangeiro!!"
+            }
+        }
+     
+    </script>
+</body>
+</html>
